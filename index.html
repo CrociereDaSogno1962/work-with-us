@@ -26,7 +26,7 @@
             min-height: 100vh;
         }
         footer{
-            height: 50px;
+            min-height: 50px;
             background-color: #ccc;
             line-height: 50px;
         }
@@ -44,6 +44,19 @@
             height: 40px;
             width: 40px;
             display: block;
+        }
+        .locker{
+            position: fixed;
+            right: 5px;
+            top: 5px;
+        }
+        .locker a {
+            width: 50px;
+            height: 50px;
+            display: block;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            overflow: hidden;
         }
     </style>
 </head>
@@ -126,6 +139,11 @@
             </div>
         </div>
     </footer>
+    <div class="locker">
+        <a href="https://zireemilsoude.net/4/8565787">
+            <img src="./images/lock.webp" alt="lock security icon" class="img-fluid">
+        </a>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>
