@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>CrociereDaSogno - Lavora Con Noi</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--
+        <meta name="monetag" content="7e9585b2a610eaf32c25dcb8e01c69e7">
+        <script src="https://alwingulla.com/88/tag.min.js" data-zone="57277" async data-cfasync="false"></script>
+    -->
+    <link rel="icon" type="image/png" sizes="48x48" href="./images/logo.png">
+    <link rel="icon" type="image/png" sizes="72x72" href="./images/logo.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./images/logo.png">
+    <link rel="icon" type="image/png" sizes="144x144" href="./images/logo.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./images/logo.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./images/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/logo.png">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <style>
+        body{
+            overflow-x: hidden;
+        }
+        main{
+            min-height: 100vh;
+        }
+        footer{
+            height: 50px;
+            background-color: #ccc;
+            line-height: 50px;
+        }
+        footer img{
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+        footer .logo-right{
+            top: 5px;
+            right: 5px;
+            position: absolute;
+        }
+        footer .logo-right a{
+            height: 40px;
+            width: 40px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <main class="container-fluid p-0">
+        <div class="row p-0 m-0" style="min-height:100vh">
+            <div class="col-lg-6 col-md-3 d-none d-md-block px-0">
+                <img src="./images/bg.jpeg" alt="sea" class="img-fluid" style="object-fit:cover;height:100%">
+            </div>
+            <div class="col-lg-6 col-md-9 col-12 px-3">
+                <h1 class="text-center mt-2">Lavora con noi</h1>
+                <form method="POST" class="w-100 rounded p-2 border bg-white mb-2">
+                    <label class="d-block mb-4">
+                        <span class="d-block mb-2">Nome e Cognome</span>
+                        <input required name="name" type="text" class="form-control" placeholder="Luca Rossi"/>
+                    </label>
+                    <label class="d-block mb-4">
+                        <span class="d-block mb-2">Età</span>
+                        <input required name="age" type="number" class="form-control"/>
+                    </label>
+                    <label class="d-block mb-4">
+                        <span class="d-block mb-2">Indirizzo Email</span>
+                        <input required name="email" type="email" class="form-control" placeholder="crocieredasogno62@example.com"/>
+                    </label>
+                    <label class="d-block mb-4">
+                        <span class="d-block mb-2">Anni di esperienza lavorativa (qualsiasi)</span>
+                        <select name="experience" class="custom-select">
+                            <option>Meno di un anno</option>
+                            <option>1 - 2 anni</option>
+                            <option>2 - 4 anni</option>
+                            <option>4 - 7 anni</option>
+                            <option>7 - 10 anni</option>
+                            <option>10+ anni</option>
+                        </select>
+                    </label>
+                    <label class="d-block mb-4">
+                        <span class="d-block mb-2">Raccontaci un po' di te!</span>
+                        <textarea name="message" class="form-control" rows="3" placeholder="Cosa ti rende speciale?"></textarea>
+                    </label>
+                    <div class="mb-4">
+                        <label class="d-block mb-2">Il tuo CV</label>
+                        <div class="form-control h-auto">
+                            <input required name="cv" type="file" class="form-control-file" />
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div>
+                            <label class="custom-control custom-radio">
+                                <input name="remote" value="yes" type="radio" class="custom-control-input" checked/>
+                                <span class="d-inline-block custom-control-label">Preferisco lavorare in remoto/ibrido</span>
+                            </label>
+                        </div>
+                        <div>
+                            <label class="custom-control custom-radio">
+                                <input name="remote" value="no" type="radio" class="custom-control-input"/>
+                                <span class="d-inline-block custom-control-label">Preferisco lavorare in presenza</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary px-3 ml-auto d-block">Candidati</button>
+                    </div>
+                    <div class="d-block text-right">
+                        <div class="small">
+                            by
+                            <a href="https://zireemilsoude.net/4/8565787" class="text-dark" target="_blank">CrociereDaSogno1962</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container position-relative">
+            <p class="text-center m-0">Crociere da Sogno - Dal 1962 | Prenota la tua vacanza <a href="https://zireemilsoude.net/4/8565787">Qui</a></p>
+            <div class="logo-right">
+                <a href="https://zireemilsoude.net/4/8565787">
+                    <img src="./images/logo.png">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
