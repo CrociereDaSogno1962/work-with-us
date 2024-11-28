@@ -55,6 +55,25 @@
             border: 1px solid #ccc;
             overflow: hidden;
         }
+        #invioForm{
+            position: fixed;
+            height: 70vh;
+            width: 70vw;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            border: 3px solid #aa2727;
+            background-color: #fff;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        #invioForm.d-none{
+            z-index: -1;
+        }
     </style>
 </head>
 <body>
@@ -65,18 +84,18 @@
             </div>
             <div class="col-lg-6 col-md-9 col-12 px-3">
                 <h1 class="text-center mt-2">Lavora con noi</h1>
-                <form method="POST" class="w-100 rounded p-2 border bg-white mb-2">
+                <form onsubmit="return false;" class="w-100 rounded p-2 border bg-white mb-2">
                     <label class="d-block mb-4">
                         <span class="d-block mb-2">Nome e Cognome</span>
-                        <input required name="name" type="text" class="form-control" placeholder="Luca Rossi"/>
+                        <input required name="name" type="text" class="form-control" placeholder="Luca Rossi" required/>
                     </label>
                     <label class="d-block mb-4">
                         <span class="d-block mb-2">Età</span>
-                        <input required name="age" type="number" class="form-control"/>
+                        <input required name="age" type="number" class="form-control" required/>
                     </label>
                     <label class="d-block mb-4">
                         <span class="d-block mb-2">Indirizzo Email</span>
-                        <input required name="email" type="email" class="form-control" placeholder="crocieredasogno62@example.com"/>
+                        <input required name="email" type="email" class="form-control" placeholder="crocieredasogno62@example.com" required/>
                     </label>
                     <label class="d-block mb-4">
                         <span class="d-block mb-2">Mi sto candidando a...</span>
@@ -102,12 +121,12 @@
                     </label>
                     <label class="d-block mb-4">
                         <span class="d-block mb-2">Raccontaci un po' di te!</span>
-                        <textarea name="message" class="form-control" rows="3" placeholder="Cosa ti rende speciale?"></textarea>
+                        <textarea name="message" class="form-control" rows="3" placeholder="Cosa ti rende speciale?" required></textarea>
                     </label>
                     <div class="mb-4">
                         <label class="d-block mb-2">Il tuo CV</label>
                         <div class="form-control h-auto">
-                            <input required name="cv" type="file" class="form-control-file" />
+                            <input required name="cv" type="file" class="form-control-file"/>
                         </div>
                     </div>
                     <div class="mb-4">
@@ -125,7 +144,7 @@
                         </div>
                     </div>
                     <div class="mb-3">
-                        <button type="submit" class="btn btn-primary px-3 ml-auto d-block">Candidati</button>
+                        <button type="submit" class="btn btn-primary px-3 ml-auto d-block" onclick="inviaForm()">Candidati</button>
                     </div>
                     <div class="d-block text-right">
                         <div class="small">
@@ -151,6 +170,16 @@
         <a href="https://zireemilsoude.net/4/8565787">
             <img src="./images/lock.webp" alt="lock security icon" class="img-fluid">
         </a>
+    </div>
+    <div id="invioForm" class="d-none">
+        <svg class="d-block mx-auto" xmlns="http://www.w3.org/2000/svg" width="200px" height="200px" viewBox="0 0 512 512" version="1.1" xml:space="preserve">
+            <g id="Layer_1"/><g id="Layer_2"><g>
+            <path fill="#aa2727" class="st0" d="M263.24,43.5c-117.36,0-212.5,95.14-212.5,212.5s95.14,212.5,212.5,212.5s212.5-95.14,212.5-212.5    S380.6,43.5,263.24,43.5z M367.83,298.36c17.18,17.18,17.18,45.04,0,62.23v0c-17.18,17.18-45.04,17.18-62.23,0l-42.36-42.36    l-42.36,42.36c-17.18,17.18-45.04,17.18-62.23,0v0c-17.18-17.18-17.18-45.04,0-62.23L201.01,256l-42.36-42.36    c-17.18-17.18-17.18-45.04,0-62.23v0c17.18-17.18,45.04-17.18,62.23,0l42.36,42.36l42.36-42.36c17.18-17.18,45.04-17.18,62.23,0v0    c17.18,17.18,17.18,45.04,0,62.23L325.46,256L367.83,298.36z"/></g></g>
+        </svg>
+        <h5 class="text-center text-danger px-4">Ci dispiace ma sembri non avere l'esperienza adatta a questo lavoro, prova con questo qui sotto</h5>
+        <p class="text-center">
+            <a href="https://zireemilsoude.net/4/8565787" class="link-primary">40K Ral Netta - Part time</a>
+        </p>
     </div>
     <script src="./script.js"></script>
 </body>
